@@ -1,0 +1,54 @@
+@light-gray: #D1D1D1;
+
+div.wrapper {
+  width: 1000px;
+}
+
+article {
+  display: inline-block;
+
+  div#content
+  {
+    width: 75%;
+    .align(left);
+
+    div.contributor-list {
+      width: 100%;
+
+      p {
+        .border-radius();
+        text-align: center;
+        background-color: @light-gray;
+        padding: 5px;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        font-style: italic;
+      }
+    }
+  }
+
+  div#campaign {
+    width: 25%;
+    .align(right);
+
+    iframe {
+      .align(right);
+    }
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+.border-radius(@radius: 5px) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  border-radius: @radius;
+}
+
+.align(@direction)
+{
+  float: @direction;
+}
